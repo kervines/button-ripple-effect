@@ -16,15 +16,17 @@ body {
 .btn {
   text-decoration: none;
   color: #000;
-  background-color: greenyellow;
+  background-color: rgb(48, 103, 175);
   padding: 20px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 0px 1px rgba(0, 0, 0, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
 
 .btn span {
+  color: #eee;
+  pointer-events: none;
   position: relative;
   z-index: 1;
 }
@@ -33,14 +35,15 @@ body {
   content: "";
   width: 0;
   height: 0;
-  background-color: #023102;
+  background-color: var(--colors);
+  /* background-color: #003c74; */
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: var(--yPos);
+  left: var(--xPos);
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.4s, height 0.4s;
 }
 
 .btn:hover::before {
